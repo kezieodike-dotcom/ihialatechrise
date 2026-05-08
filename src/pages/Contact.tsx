@@ -66,6 +66,17 @@ export default function Contact() {
                 </div>
               </div>
 
+              <div className="mt-8">
+                <a 
+                  href="https://t.me/ihialatechrise" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="w-full flex items-center justify-center gap-3 bg-[#24A1DE]/10 text-[#24A1DE] py-4 rounded-2xl font-bold hover:bg-[#24A1DE] hover:text-white transition-all border border-[#24A1DE]/20"
+                >
+                  <Send className="w-5 h-5" /> Join Telegram Community
+                </a>
+              </div>
+
               <div className="mt-12 pt-12 border-t border-primary/5">
                 <h4 className="font-bold text-primary mb-4">Follow Our Impact</h4>
                 <div className="flex gap-4">

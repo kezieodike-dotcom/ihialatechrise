@@ -17,15 +17,28 @@ export default function Footer() {
               Empowering communities through technology and education. Building the future of Ihiala, one developer at a time.
             </p>
             <div className="flex gap-4">
-              <button className="p-2 bg-white/10 rounded-full hover:bg-secondary/20 hover:text-secondary transition-all">
+              <a 
+                href="https://t.me/ihialatechrise" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-2 bg-white/10 rounded-full hover:bg-secondary/20 hover:text-secondary transition-all"
+              >
                 <Share2 className="w-5 h-5" />
-              </button>
-              <button className="p-2 bg-white/10 rounded-full hover:bg-secondary/20 hover:text-secondary transition-all">
+              </a>
+              <a 
+                href="mailto:hello@ihialatechrise.org" 
+                className="p-2 bg-white/10 rounded-full hover:bg-secondary/20 hover:text-secondary transition-all"
+              >
                 <Mail className="w-5 h-5" />
-              </button>
-              <button className="p-2 bg-white/10 rounded-full hover:bg-secondary/20 hover:text-secondary transition-all">
+              </a>
+              <a 
+                href="https://ihialatechrise.org" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="p-2 bg-white/10 rounded-full hover:bg-secondary/20 hover:text-secondary transition-all"
+              >
                 <Globe className="w-5 h-5" />
-              </button>
+              </a>
             </div>
           </div>
 

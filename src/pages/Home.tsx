@@ -308,9 +308,14 @@ export default function Home() {
               <Link to="/apply" className="bg-accent text-white px-12 py-4 rounded-2xl font-bold text-lg hover:brightness-110 active:scale-95 transition-all shadow-xl shadow-accent/20">
                 Apply For Program
               </Link>
-              <button className="bg-primary text-white px-12 py-4 rounded-2xl font-bold text-lg hover:brightness-110 active:scale-95 transition-all">
-                Become a Mentor
-              </button>
+              <a 
+                href="https://t.me/ihialatechrise" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="bg-primary text-white px-12 py-4 rounded-2xl font-bold text-lg hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2"
+              >
+                Join Our Telegram
+              </a>
             </div>
           </div>
         </div>
