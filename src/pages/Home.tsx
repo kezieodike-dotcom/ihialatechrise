@@ -79,8 +79,8 @@ export default function Home() {
               <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl relative z-10 border border-primary/5">
                 <img 
                   className="w-full h-full object-cover" 
-                  src="/mission.jpg.jpeg" 
-                  alt="Ihiala Tech Rise Mission" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMmrQOWG__nVbLUrm7EgrOiFyOLG-LqhhwG9Hni7tQKKgnPACSqX2OlQcLwxDgm3E-1vhJOQK00V1vEmu3H6nczjkUBqi21JTQTh8L6b7hLaEwIw-yDird6ZjaO5KdBiksUP--_YcvsZyXcayXaaUMYsj0xM7DralcNdPhSD0ksIMG3cI9xilK1IzGXTco14DE_ukSjg6YPq8DzNZ-agjSoZfCuF31sLAiA93NdkssUqHjKUktc1OyC0Tiyhu-8syKEw1kvOR7_Rk" 
+                  alt="Students learning" 
                 />
               </div>
               <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-2xl shadow-xl z-20 border border-primary/5 animate-bounce-slow">
