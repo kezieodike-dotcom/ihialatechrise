@@ -9,6 +9,7 @@ import Partners from "./pages/Partners";
 import Apply from "./pages/Apply";
 import Contact from "./pages/Contact";
 import Impact from "./pages/Impact";
+import AdminDashboard from "./pages/AdminDashboard";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -35,6 +36,7 @@ export default function App() {
             <Route path="/impact" element={<Impact />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/apply" element={<Apply />} />
+            <Route path="/admin" element={<AdminDashboard />} />
           </Routes>
         </main>
         <Footer />
