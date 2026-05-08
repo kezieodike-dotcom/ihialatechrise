@@ -242,7 +242,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">Advanced Data Analytics</h3>
-                    <p className="text-white/40 uppercase tracking-widest text-[10px] font-bold mt-1">Coming Q4 2024</p>
+                    <p className="text-white/40 uppercase tracking-widest text-[10px] font-bold mt-1">Coming Q4 2026</p>
                   </div>
                 </div>
                 <p className="text-white/70 mb-10 max-w-xl leading-relaxed">A deep dive into data interpretation, visualization, and strategic decision-making for aspiring analysts.</p>
@@ -302,7 +302,7 @@ export default function Home() {
           <div className="bg-background p-12 md:p-20 rounded-[3rem] border-2 border-primary/5 shadow-2xl">
             <h2 className="text-3xl md:text-5xl font-black text-primary mb-6 tracking-tight tracking-tight">Ready to Start Your Journey?</h2>
             <p className="text-primary/60 text-lg mb-10 leading-relaxed font-light">
-              Applications for our Fall 2024 cohort are now open. Don't miss your chance to be part of the tech revolution.
+              Applications for our Fall 2026 cohort are now open. Don't miss your chance to be part of the tech revolution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/apply" className="bg-accent text-white px-12 py-4 rounded-2xl font-bold text-lg hover:brightness-110 active:scale-95 transition-all shadow-xl shadow-accent/20">

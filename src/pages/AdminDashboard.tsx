@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabase";
 import { motion } from "motion/react";
-import { Users, BookOpen, Clock, CheckCircle, Download, Search, Filter } from "lucide-react";
+import { Users, BookOpen, Clock, CheckCircle, Download, Search, Filter, ChevronRight } from "lucide-react";
 
 interface Application {
   id: string;
