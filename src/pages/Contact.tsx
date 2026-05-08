@@ -8,7 +8,7 @@ export default function Contact() {
     const formData = new FormData(form);
     
     try {
-      const response = await fetch("https://formspree.io/danielobinna09@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/danielobinna09@gmail.com", {
         method: "POST",
         body: formData,
         headers: {

@@ -29,8 +29,8 @@ export default function Apply() {
 
       if (submitError) throw submitError;
 
-      // 2. Send to Email via Formspree
-      await fetch("https://formspree.io/danielobinna09@gmail.com", {
+      // 2. Send to Email via Formsubmit
+      await fetch("https://formsubmit.co/ajax/danielobinna09@gmail.com", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
