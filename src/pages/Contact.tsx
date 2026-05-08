@@ -51,7 +51,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-primary/40 uppercase tracking-widest">Call Us</p>
-                    <p className="font-bold text-primary">+234 812 345 6789</p>
+                    <p className="font-bold text-primary">+234 703 720 8507</p>
                   </div>
                 </div>
 
@@ -78,14 +78,19 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-secondary p-8 rounded-[2.5rem] text-white shadow-xl flex items-center justify-between group cursor-pointer overflow-hidden relative">
+            <a 
+              href="https://wa.me/2347037208507" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-secondary p-8 rounded-[2.5rem] text-white shadow-xl flex items-center justify-between group cursor-pointer overflow-hidden relative"
+            >
               <div className="relative z-10">
                 <h3 className="text-xl font-bold mb-2">Chat on WhatsApp</h3>
                 <p className="text-sm opacity-80">Instant support for your inquiries</p>
               </div>
               <MessageCircle className="w-12 h-12 relative z-10 group-hover:scale-110 transition-transform" />
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full translate-x-16 -translate-y-16" />
-            </div>
+            </a>
           </div>
 
           {/* Contact Form */}
