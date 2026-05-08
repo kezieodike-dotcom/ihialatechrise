@@ -129,7 +129,7 @@ export default function Home() {
                   Founded by Engr. Pgm. Obinna Daniel O., Ihiala Tech Rise is driven by a vision to bridge the gap between basic education and real-world tech skills.
                 </p>
                 <p>
-                  Our initiative equips students, graduates, working-class individuals, business men and even the non-elite across our communities including <span className="text-white font-medium">Ihiala, Amorka, Azia, Lilu, Okija, Mbosi, Isseke, Orsumoghu, Ubuluisuzor and Uli.</span>
+                  Our initiative equips students, graduates, working-class individuals, business men and even the non-elite across our communities including <span className="text-white font-medium">Ihiala Amorka, Azia, Lilu, Okija, Mbosi, Isseke, Orsumoghu, Ubuluisuzor and Uli.</span>
                 </p>
                 <p>
                   Through training, mentorship, and community engagement, we are building a generation that is digitally literate, confident, and ready to create opportunities in the modern workforce.
