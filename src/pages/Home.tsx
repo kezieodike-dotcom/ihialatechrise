@@ -61,7 +61,7 @@ export default function Home() {
               </Link>
               <Link 
                 to="/programs" 
-                className="w-full md:w-auto h-[56px] px-8 bg-transparent border border-white/20 text-white rounded-xl font-semibold text-[16px] flex items-center justify-center hover:bg-white/10 transition-all duration-200"
+                className="w-full md:w-auto h-[56px] px-8 bg-white text-primary rounded-xl font-semibold text-[16px] flex items-center justify-center hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
               >
                 Explore Programs
               </Link>
