@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1 border-b border-white/10 pb-8 md:border-0 md:pb-0">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <img src="/logo.jpeg" alt="Ihiala Tech Rise Logo" className="h-10 w-auto" />
+              <img src="/logo.png" alt="Ihiala Tech Rise Logo" className="h-10 w-auto" />
               <span className="font-bold text-2xl tracking-tight">Ihiala Tech Rise</span>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
