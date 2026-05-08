@@ -22,11 +22,22 @@ export default function Apply() {
     setError(null);
 
     try {
+      // 1. Save to Supabase
       const { error: submitError } = await supabase
         .from('applications')
         .insert([formData]);
 
       if (submitError) throw submitError;
+
+      // 2. Send to Email via Formspree
+      await fetch("https://formspree.io/danielobinna09@gmail.com", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      });
       
       setSubmitted(true);
       setFormData({

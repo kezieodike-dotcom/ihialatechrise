@@ -2,9 +2,29 @@ import { motion } from "motion/react";
 import { Mail, Phone, MapPin, MessageCircle, Send } from "lucide-react";
 
 export default function Contact() {
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Message sent! We will get back to you soon.");
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch("https://formspree.io/danielobinna09@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        alert("Message sent! We will get back to you soon.");
+        form.reset();
+      } else {
+        alert("There was an error sending your message. Please try again.");
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again later.");
+    }
   };
 
   return (
@@ -115,22 +135,22 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-primary uppercase tracking-widest text-[10px]">Full Name</label>
-                    <input required type="text" placeholder="Your Name" className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all" />
+                    <input required name="name" type="text" placeholder="Your Name" className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-primary uppercase tracking-widest text-[10px]">Email Address</label>
-                    <input required type="email" placeholder="your@email.com" className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all" />
+                    <input required name="email" type="email" placeholder="your@email.com" className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all" />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-primary uppercase tracking-widest text-[10px]">Subject</label>
-                  <input required type="text" placeholder="How can we help?" className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all" />
+                  <input required name="subject" type="text" placeholder="How can we help?" className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all" />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-primary uppercase tracking-widest text-[10px]">Message</label>
-                  <textarea required rows={6} placeholder="Your message here..." className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all resize-none" />
+                  <textarea required name="message" rows={6} placeholder="Your message here..." className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all resize-none" />
                 </div>
 
                 <motion.button 
