@@ -99,7 +99,7 @@ export default function AdminDashboard() {
 
         {/* Table Section */}
         <div className="bg-white rounded-[2.5rem] border border-primary/5 shadow-xl overflow-hidden">
-          <div className="p-8 border-b border-primary/5 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="p-6 md:p-8 border-b border-primary/5 flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="relative flex-grow max-w-md">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-primary/30" />
               <input 
@@ -110,7 +110,7 @@ export default function AdminDashboard() {
                 className="w-full pl-12 pr-4 py-3 bg-background border-none rounded-2xl focus:ring-2 focus:ring-secondary transition-all"
               />
             </div>
-            <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0">
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
               <button className="whitespace-nowrap px-4 py-2 bg-background rounded-xl text-xs font-bold text-primary/60 hover:text-primary transition-all flex items-center gap-2">
                 <Filter className="w-4 h-4" /> All Tracks
               </button>
@@ -119,7 +119,11 @@ export default function AdminDashboard() {
             </div>
           </div>
 
-          <div className="overflow-x-auto">
+          <div className="p-4 md:hidden text-[10px] text-primary/30 font-bold uppercase tracking-widest flex items-center gap-2 border-b border-primary/5">
+            <ChevronRight className="w-3 h-3 animate-pulse" /> Scroll horizontally to see more
+          </div>
+
+          <div className="overflow-x-auto scrollbar-hide">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-background/50">

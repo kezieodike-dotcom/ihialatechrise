@@ -61,7 +61,7 @@ export default function Footer() {
           <p className="text-white/40 text-xs">
             © {new Date().getFullYear()} Ihiala Tech Rise. All rights reserved. Empowering communities through technology.
           </p>
-          <Link to="/admin" className="text-white/20 hover:text-white/60 text-[12px] font-semibold uppercase tracking-[0.08em] transition-all">
+          <Link to="/admin" className="text-white/20 hover:text-white/60 text-[10px] font-bold uppercase tracking-widest transition-all">
             Admin Portal
           </Link>
         </div>

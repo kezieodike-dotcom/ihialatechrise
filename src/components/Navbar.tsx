@@ -32,26 +32,24 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {[
-            { name: "Programs", path: "/programs" },
-            { name: "About", path: "/about" },
-            { name: "Impact", path: "/impact" },
-            { name: "Contact", path: "/contact" },
-          ].map((link) => (
-            <Link 
-              key={link.name} 
-              to={link.path} 
-              className="text-[15px] font-medium text-primary/70 hover:text-primary transition-colors"
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              to={link.path}
+              className={`text-sm font-medium transition-colors hover:text-secondary ${location.pathname === link.path ? "text-secondary" : "text-primary/70"}`}
             >
               {link.name}
             </Link>
           ))}
-          <Link 
-            to="/apply" 
-            className="h-[48px] px-6 bg-primary text-white rounded-xl font-semibold text-[15px] flex items-center justify-center hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-primary/10"
-          >
-            Apply Now
-          </Link>
+          <div className="flex items-center gap-4 ml-4">
+            <button className="text-sm font-semibold text-primary/70 hover:text-primary">Volunteer</button>
+            <Link
+              to="/apply"
+              className="bg-accent text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:brightness-110 active:scale-95 transition-all shadow-md shadow-accent/20"
+            >
+              Apply Now
+            </Link>
+          </div>
         </div>
 
         {/* Mobile Toggle */}

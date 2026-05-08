@@ -6,88 +6,43 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-[120px] pb-[160px] md:pt-[160px] md:pb-[200px] overflow-hidden">
-        {/* Background Layer */}
+      <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center py-20">
         <div 
-          className="absolute inset-0 bg-cover bg-center z-0 scale-105" 
+          className="absolute inset-0 bg-cover bg-center z-0" 
           style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuAjupNRq06CgRJGdcLRHQ2eXCwhAuHu5EN9w6_u5NicZRjaMRP7KhxNFF6W7zczKF-eo6mD2E-MUZNI2rFgUUXbjPW7vGd9DNerKTa2jpWqVCT7Ls78b0WeFnYljMcchRPNczHWOyfbzv_hj-x7L9jhvzOtmAlT4j5DdsX-L8BACcuI_qYmn33Hc-Nr-f7pGyBlK8w_G7dmgXeBDPKeQZ06r1NZ_OFmnoJL-jxIGrrUV-8El1MqN5zY1ce9nIPquzwnqlerybaUxSQ')` }}
         />
-        <div className="absolute inset-0 bg-primary/85 backdrop-blur-[4px] z-1" />
+        <div className="absolute inset-0 bg-primary/80 backdrop-blur-[2px] z-1" />
         
-        {/* Content Container (Max width 1200px) */}
-        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 md:px-20 text-center md:text-left">
-          <div className="max-w-[720px]">
-            {/* 1. Hero Eyebrow */}
-            <motion.p 
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-[14px] md:text-[16px] font-medium uppercase tracking-[0.08em] text-white/70 mb-4"
-            >
-              Building the Future of Ihiala LG
-            </motion.p>
-
-            {/* 2. Hero Heading (H1) */}
-            <motion.h1 
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-[32px] md:text-[64px] lg:text-[72px] font-bold text-white leading-[1.1] md:leading-[1.15] tracking-[-0.02em] mb-6"
-            >
-              Empowering the Next Generation of Tech Leaders
-            </motion.h1>
-
-            {/* 3. Hero Subtext */}
-            <motion.p 
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-[16px] md:text-[20px] lg:text-[22px] leading-[1.5] text-white/80 font-normal mb-10 max-w-[600px]"
-            >
-              Bridging the gap between basic education and real-world tech skills across the Ihiala region through practical training and mentorship.
-            </motion.p>
-
-            {/* 4. Hero Buttons (Stack on mobile) */}
-            <motion.div 
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="flex flex-col md:flex-row items-center gap-4"
-            >
-              <Link 
-                to="/apply" 
-                className="w-full md:w-auto h-[56px] px-8 bg-secondary text-white rounded-xl font-semibold text-[16px] flex items-center justify-center hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-secondary/20"
-              >
-                Apply for Training
-              </Link>
-              <Link 
-                to="/programs" 
-                className="w-full md:w-auto h-[56px] px-8 bg-white text-primary rounded-xl font-semibold text-[16px] flex items-center justify-center hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
-              >
-                Explore Programs
-              </Link>
-            </motion.div>
-
-            {/* 5. Trust Indicators (Metrics) */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="mt-16 md:mt-24 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12"
-            >
-              <div>
-                <p className="text-[24px] md:text-[32px] font-bold text-white mb-1">500+</p>
-                <p className="text-[12px] uppercase tracking-wider text-white/50 font-medium">Students Trained</p>
-              </div>
-              <div>
-                <p className="text-[24px] md:text-[32px] font-bold text-white mb-1">10+</p>
-                <p className="text-[12px] uppercase tracking-wider text-white/50 font-medium">Communities Reached</p>
-              </div>
-              <div className="col-span-2 md:col-span-1">
-                <p className="text-[24px] md:text-[32px] font-bold text-white mb-1">95%</p>
-                <p className="text-[12px] uppercase tracking-wider text-white/50 font-medium">Success Rate</p>
-              </div>
-            </motion.div>
-          </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center text-white">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight max-w-4xl mx-auto"
+          >
+            Empowering the Next Generation of Tech Leaders in Ihiala LG
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto font-light leading-relaxed"
+          >
+            Bridging the digital divide with world-class training in software development, design, and digital literacy.
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <Link to="/apply" className="bg-accent text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl shadow-accent/20 hover:scale-105 transition-transform active:scale-95">
+              Apply Now
+            </Link>
+            <Link to="/programs" className="border-2 border-white/30 backdrop-blur-md text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition-all active:scale-95">
+              Explore Programs
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -145,9 +100,9 @@ export default function Home() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative order-2 md:order-1"
+              className="relative order-2 lg:order-1 mt-12 lg:mt-0 px-4 md:px-0"
             >
-              <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/10 relative z-10">
+              <div className="aspect-[4/5] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/10 relative z-10">
                 <img 
                   className="w-full h-full object-cover" 
                   src="/founder.jpg" 
