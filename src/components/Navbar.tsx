@@ -26,7 +26,7 @@ export default function Navbar() {
     <nav className="relative w-full z-50 bg-white border-b border-primary/5 py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 group">
-          <img src="/logo.png" alt="Ihiala Tech Rise Logo" className="h-12 w-auto group-hover:scale-110 transition-transform" />
+          <img src="/logo.png" alt="Ihiala Tech Rise Logo" className="h-12 w-auto group-hover:scale-110 transition-transform mix-blend-multiply" />
           <span className="font-bold text-xl tracking-tight text-primary">Ihiala Tech Rise</span>
         </Link>
 
