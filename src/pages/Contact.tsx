@@ -143,9 +143,31 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-primary uppercase tracking-widest text-[10px]">Subject</label>
-                  <input required name="subject" type="text" placeholder="How can we help?" className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-primary uppercase tracking-widest text-[10px]">Your Town</label>
+                    <select 
+                      required 
+                      name="town"
+                      className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all appearance-none cursor-pointer"
+                    >
+                      <option value="" disabled selected>Select your town</option>
+                      <option value="Ihiala Amorka">Ihiala Amorka</option>
+                      <option value="Azia">Azia</option>
+                      <option value="Lilu">Lilu</option>
+                      <option value="Okija">Okija</option>
+                      <option value="Mbosi">Mbosi</option>
+                      <option value="Isseke">Isseke</option>
+                      <option value="Orsumoghu">Orsumoghu</option>
+                      <option value="Ubuluisuzor">Ubuluisuzor</option>
+                      <option value="Uli">Uli</option>
+                      <option value="Others">Others</option>
+                    </select>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-primary uppercase tracking-widest text-[10px]">Subject</label>
+                    <input required name="subject" type="text" placeholder="How can we help?" className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all" />
+                  </div>
                 </div>
 
                 <div className="space-y-2">

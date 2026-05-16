@@ -105,7 +105,7 @@ export default function Home() {
               <div className="aspect-[4/5] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/10 relative z-10">
                 <img 
                   className="w-full h-full object-cover" 
-                  src="/founder.jpg" 
+                  src="/founder.jpeg" 
                   alt="Engr. Pgm. Obinna Daniel O. - Founder of Ihiala Tech Rise" 
                 />
               </div>
@@ -126,7 +126,7 @@ export default function Home() {
               
               <div className="space-y-6 text-white/80 leading-relaxed text-lg font-light">
                 <p>
-                  Founded by Engr. Pgm. Obinna Daniel O., Ihiala Tech Rise is driven by a vision to bridge the gap between basic education and real-world tech skills.
+                  Founded by <strong className="text-white">Engr. Pgm. Obinna Daniel O.</strong>, a seasoned Civil Engineer and a native of Ihiala, Mbrakpaka in Ihiala Local Government, Anambra State, Ihiala Tech Rise is driven by a vision to bridge the gap between basic education and real-world tech skills.
                 </p>
                 <p>
                   Our initiative equips students, graduates, working-class individuals, business men and even the non-elite across our communities including <span className="text-white font-medium">Ihiala Amorka, Azia, Lilu, Okija, Mbosi, Isseke, Orsumoghu, Ubuluisuzor and Uli.</span>

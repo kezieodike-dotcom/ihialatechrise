@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { User, Target, Eye, Star, Quote, School } from "lucide-react";
+import { User, Target, Eye, Star, Quote, School, Building2, Cpu, Award, GraduationCap, MapPin, Lightbulb, BookOpen, Users, HardHat } from "lucide-react";
 
 export default function About() {
   return (
@@ -18,36 +18,17 @@ export default function About() {
 
       {/* Story */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-12 gap-16 items-center">
-            <div className="md:col-span-5 relative">
-              <motion.div 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-1 border border-primary/10"
-              >
-                <img src="/founder.jpg" className="w-full h-full object-cover" alt="Engr. Pgm. Obinna Daniel O. - Founder of Ihiala Tech Rise" />
-              </motion.div>
-              <div className="absolute -bottom-10 -right-4 md:-right-10 bg-secondary p-8 rounded-3xl shadow-2xl max-w-[320px] text-white border-t-8 border-accent">
-                <p className="font-medium italic text-lg leading-snug">"Technology is the ultimate equalizer for our youth."</p>
-                <div className="mt-4 flex items-center gap-3">
-                   <div className="w-8 h-[2px] bg-accent/50" />
-                   <p className="text-[10px] font-bold opacity-80 uppercase tracking-widest">— Engr. Pgm. Obinna Daniel O., Founder</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="md:col-span-7 py-10 md:py-0">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-1.5 bg-accent rounded-full" />
-                <h2 className="text-4xl font-black text-primary uppercase tracking-tight">Our Story</h2>
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="py-10 md:py-0">
+              <div className="flex flex-col items-center mb-12">
+                <div className="w-12 h-1.5 bg-accent rounded-full mb-6" />
+                <h2 className="text-4xl md:text-5xl font-black text-primary uppercase tracking-tight text-center">Our Story</h2>
               </div>
               <div className="space-y-6 text-primary/70 leading-relaxed text-lg">
-                <p>Ihiala Tech Rise (ITR) is a tech-hub focused on empowering individuals with practical digital skills for today’s tech-driven world. Founded by Engr. Pgm. Obinna Daniel O., the initiative is driven by a vision to bridge the gap between basic education and real-world tech skills.</p>
+                <p>Ihiala Tech Rise (ITR) is a tech-hub focused on empowering individuals with practical digital skills for today’s tech-driven world. Founded by <strong className="text-primary">Engr. Pgm. Obinna Daniel O.</strong>, a native of Ihiala, Mbrakpaka in Ihiala Local Government, Anambra State, the initiative is driven by a vision to bridge the gap between basic education and real-world tech skills.</p>
                 <p>We equip students, graduates, working-class individuals, business men and even the non-elite across communities including Ihiala Amorka, Azia, Lilu, Okija, Mbosi, Isseke, Orsumoghu, Ubuluisuzor and Uli.</p>
               </div>
-              <div className="grid grid-cols-2 gap-8 mt-12">
+              <div className="grid grid-cols-2 gap-8 mt-16 max-w-2xl mx-auto">
                 <div className="p-8 bg-background rounded-3xl border-l-[6px] border-secondary shadow-sm">
                   <span className="text-4xl font-black text-primary block mb-1">500+</span>
                   <span className="text-[10px] font-bold text-primary/40 uppercase tracking-[0.2em]">Graduates</span>
@@ -56,9 +37,224 @@ export default function About() {
                   <span className="text-4xl font-black text-accent block mb-1">85%</span>
                   <span className="text-[10px] font-bold text-primary/40 uppercase tracking-[0.2em]">Employment Rate</span>
                 </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet the Founder */}
+      <section className="py-28 bg-primary text-white overflow-hidden relative">
+        {/* Decorative blobs */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-accent/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <span className="bg-accent/20 text-accent px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6 inline-block border border-accent/30">
+              Visionary Behind ITR
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black mt-4 mb-4 tracking-tight">
+              Meet the Founder
+            </h2>
+            <p className="text-white/50 max-w-xl mx-auto text-lg">
+              The story of a son of the soil who chose to invest his expertise back into the community that shaped him.
+            </p>
+          </motion.div>
+
+          {/* Main Profile Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-[2.5rem] p-8 md:p-16 mb-12 grid md:grid-cols-12 gap-12 items-start"
+          >
+            {/* Photo + Identity */}
+            <div className="md:col-span-4 flex flex-col items-center text-center">
+              <div className="relative mb-6">
+                <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-accent shadow-2xl shadow-accent/30 mx-auto">
+                  <img
+                    src="/founder.jpeg"
+                    alt="Engr. Pgm. Obinna Daniel O."
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-accent text-white text-[9px] font-black uppercase tracking-[0.15em] px-3 py-1 rounded-full whitespace-nowrap shadow-lg">
+                  Founder & Director
+                </span>
+              </div>
+              <h3 className="text-2xl font-black mt-6 mb-1">Engr. Pgm. Obinna Daniel O.</h3>
+              <p className="text-accent font-semibold text-sm mb-4">B.Eng. | Civil Engineer</p>
+              <div className="flex items-center justify-center gap-2 text-white/50 text-xs mb-6">
+                <MapPin className="w-3.5 h-3.5 text-accent flex-shrink-0" />
+                <span>Mbrakpaka, Ihiala LGA, Anambra State</span>
+              </div>
+
+              {/* Quick Stats */}
+              <div className="grid grid-cols-2 gap-3 w-full">
+                {[
+                  { label: "Years Experience", value: "10+" },
+                  { label: "Youths Trained", value: "500+" },
+                  { label: "Programs Built", value: "12+" },
+                  { label: "Communities", value: "15+" },
+                ].map((s) => (
+                  <div key={s.label} className="bg-white/5 rounded-2xl p-4 border border-white/10">
+                    <span className="text-2xl font-black text-accent block">{s.value}</span>
+                    <span className="text-[9px] font-bold text-white/40 uppercase tracking-widest">{s.label}</span>
+                  </div>
+                ))}
               </div>
             </div>
+
+            {/* Bio */}
+            <div className="md:col-span-8 space-y-6 text-white/70 leading-relaxed">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-10 h-1 bg-accent rounded-full" />
+                <h4 className="text-2xl font-black text-white uppercase tracking-tight">Profile &amp; Background</h4>
+              </div>
+
+              <p className="text-lg">
+                <strong className="text-white">Engr. Pgm. Obinna Daniel O.</strong> is a seasoned Civil Engineer
+                with over a decade of hands-on experience in infrastructure development and management. A <strong className="text-accent">native of Ihiala, Mbrakpaka
+                in Ihiala Local Government, Anambra State</strong>, he carries a deep sense of responsibility to the soil
+                that nurtured his earliest curiosity for technology.
+              </p>
+              <p>
+                He holds a degree in Engineering and has enriched his expertise through certifications in project management,
+                and emerging technologies. His professional career has spanned both the private sector and
+                collaborative community-driven initiatives — working with clients and teams across Nigeria and beyond to solve
+                real-world problems through strategic planning and technology integration.
+              </p>
+              <p>
+                Beyond his corporate achievements, it is his <strong className="text-white">deep-rooted passion for youth
+                empowerment</strong> that truly defines him. He witnessed first-hand how geography and economic barriers shut
+                capable young minds out of the digital economy. That frustration became the catalyst for <strong className="text-white">Ihiala Tech Rise</strong> — a platform he conceived, built from scratch, and continues to lead as a personal calling, not merely a project.
+              </p>
+              <p>
+                He firmly believes that <em className="text-accent/90">"talent is evenly distributed, but opportunity is not"</em> —
+                and has committed his resources, network, and expertise to reversing that imbalance in Ihiala and its
+                neighbouring communities.
+              </p>
+
+              {/* Philosophy Highlight */}
+              <div className="mt-8 bg-accent/10 border border-accent/20 rounded-2xl p-6">
+                <Quote className="w-6 h-6 text-accent mb-3 opacity-60" />
+                <p className="text-lg text-white italic font-medium leading-snug">
+                  "I didn't start ITR because it was easy. I started it because I remembered what it felt like to have the drive
+                  but not the direction. Every young person in Ihiala deserves the chance to show the world what they're made of."
+                </p>
+                <div className="mt-4 flex items-center gap-3">
+                  <div className="w-6 h-[2px] bg-accent/50" />
+                  <p className="text-[10px] font-bold text-accent/70 uppercase tracking-widest">Engr. Pgm. Obinna Daniel O.</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Credentials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                icon: GraduationCap,
+                color: "accent",
+                title: "Education & Certifications",
+                items: [
+                  "B.Eng. – Civil Engineering (Hons)",
+                  "Certified Engineer (Pgm.)",
+                  "Project Management Professional",
+                  "Full-Stack Web Development Certification",
+                  "Advanced Cloud & Systems Architecture",
+                ],
+              },
+              {
+                icon: Building2,
+                color: "secondary",
+                title: "Professional Expertise",
+                items: [
+                  "Civil Engineering & Infrastructure",
+                  "Urban Planning & Structural Design",
+                  "Construction Project Management",
+                  "Technical Resource Management",
+                  "Innovation & Community Development",
+                ],
+              },
+              {
+                icon: Award,
+                color: "accent",
+                title: "Leadership & Impact",
+                items: [
+                  "Founded Ihiala Tech Rise (2020)",
+                  "Trained 500+ youths across Anambra",
+                  "Mentored 50+ working tech professionals",
+                  "Built 12+ community tech programs",
+                  "Digital inclusion advocate, Ihiala LGA",
+                ],
+              },
+            ].map((card, idx) => (
+              <motion.div
+                key={card.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 border border-white/10 rounded-[2rem] p-8 hover:border-accent/30 transition-all"
+              >
+                <div className={`bg-${card.color}/20 p-3 rounded-xl w-fit mb-6 border border-${card.color}/30`}>
+                  <card.icon className={`w-6 h-6 text-${card.color}`} />
+                </div>
+                <h4 className="font-black text-white mb-4 uppercase tracking-tight text-sm">{card.title}</h4>
+                <ul className="space-y-2">
+                  {card.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-white/60 text-xs">
+                      <span className="text-accent mt-0.5 flex-shrink-0">▸</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
+
+          {/* Driving Values */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white/5 border border-white/10 rounded-[2rem] p-8 md:p-12"
+          >
+            <div className="text-center mb-10">
+              <h4 className="text-xl font-black text-white uppercase tracking-tight mb-2">What Drives Him</h4>
+              <p className="text-white/40 text-sm">The core convictions at the heart of his work.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {[
+                { icon: MapPin, title: "Roots First", desc: "A son of Mbrakpaka who never forgot where he came from and chose to pour back into his community." },
+                { icon: Lightbulb, title: "Opportunity Architect", desc: "He believes systemic change begins with one skilled youth at a time — creating ripple effects across families and communities." },
+                { icon: Users, title: "Community Builder", desc: "He has personally mentored hundreds, fostering a culture of collaboration, sharing knowledge freely and paying it forward." },
+                { icon: BookOpen, title: "Lifelong Learner", desc: "Still studying, still building. He leads by example — showing students that growth never stops, no matter how far you've come." },
+              ].map((item, idx) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: idx * 0.08 }}
+                  viewport={{ once: true }}
+                  className="text-center p-6 rounded-2xl hover:bg-white/5 transition-all group"
+                >
+                  <div className="bg-accent/10 border border-accent/20 p-4 rounded-2xl w-fit mx-auto mb-4 group-hover:bg-accent/20 transition-all">
+                    <item.icon className="w-6 h-6 text-accent" />
+                  </div>
+                  <h5 className="font-black text-white mb-2 text-sm">{item.title}</h5>
+                  <p className="text-white/50 text-xs leading-relaxed">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 

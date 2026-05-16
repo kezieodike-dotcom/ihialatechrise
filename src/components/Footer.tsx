@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="font-bold text-2xl tracking-tight">Ihiala Tech Rise</span>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
-              Empowering communities through technology and education. Building the future of Ihiala, one developer at a time.
+              Founded by <span className="text-white font-bold">Engr. Pgm. Obinna Daniel O.</span>, a seasoned Civil Engineer and a native of Ihiala, Mbrakpaka in Ihiala Local Government.
             </p>
             <div className="flex gap-4">
               <a 

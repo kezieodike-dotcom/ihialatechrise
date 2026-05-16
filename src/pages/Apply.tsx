@@ -12,6 +12,7 @@ export default function Apply() {
     full_name: "",
     email: "",
     phone: "",
+    town: "",
     skill_interest: "",
     motivation: ""
   });
@@ -44,6 +45,7 @@ export default function Apply() {
         full_name: "",
         email: "",
         phone: "",
+        town: "",
         skill_interest: "",
         motivation: ""
       });
@@ -155,21 +157,44 @@ export default function Apply() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-primary uppercase tracking-widest text-[10px]">Skill Interest</label>
+                    <label className="text-sm font-bold text-primary uppercase tracking-widest text-[10px]">Your Town</label>
                     <select 
                       required 
-                      name="skill_interest"
-                      value={formData.skill_interest}
+                      name="town"
+                      value={formData.town}
                       onChange={handleChange}
                       className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all appearance-none cursor-pointer"
                     >
-                      <option value="" disabled>Select a program</option>
-                      <option value="Web Development">Web Development</option>
-                      <option value="Graphic Design">Graphic Design</option>
-                      <option value="Data Science">Data Science</option>
-                      <option value="Digital Literacy">Digital Literacy</option>
+                      <option value="" disabled>Select your town</option>
+                      <option value="Ihiala Amorka">Ihiala Amorka</option>
+                      <option value="Azia">Azia</option>
+                      <option value="Lilu">Lilu</option>
+                      <option value="Okija">Okija</option>
+                      <option value="Mbosi">Mbosi</option>
+                      <option value="Isseke">Isseke</option>
+                      <option value="Orsumoghu">Orsumoghu</option>
+                      <option value="Ubuluisuzor">Ubuluisuzor</option>
+                      <option value="Uli">Uli</option>
+                      <option value="Others">Others</option>
                     </select>
                   </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-primary uppercase tracking-widest text-[10px]">Skill Interest</label>
+                  <select 
+                    required 
+                    name="skill_interest"
+                    value={formData.skill_interest}
+                    onChange={handleChange}
+                    className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all appearance-none cursor-pointer"
+                  >
+                    <option value="" disabled>Select a program</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Digital Literacy">Digital Literacy</option>
+                  </select>
                 </div>
 
                 <div className="space-y-2">

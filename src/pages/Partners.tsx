@@ -136,7 +136,7 @@ export default function Partners() {
              
              <div className="md:w-2/3 p-12 md:p-20">
                 <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
-                  <div className="grid grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-2">
                        <label className="text-[10px] font-bold text-primary opacity-40 uppercase tracking-widest">Full Name</label>
                        <input type="text" placeholder="John Doe" className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all" />
@@ -145,6 +145,27 @@ export default function Partners() {
                        <label className="text-[10px] font-bold text-primary opacity-40 uppercase tracking-widest">Org Email</label>
                        <input type="email" placeholder="john@company.com" className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all" />
                     </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-bold text-primary opacity-40 uppercase tracking-widest">Base Town</label>
+                    <select 
+                      required 
+                      name="town"
+                      className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all appearance-none cursor-pointer"
+                    >
+                      <option value="" disabled selected>Select town</option>
+                      <option value="Ihiala Amorka">Ihiala Amorka</option>
+                      <option value="Azia">Azia</option>
+                      <option value="Lilu">Lilu</option>
+                      <option value="Okija">Okija</option>
+                      <option value="Mbosi">Mbosi</option>
+                      <option value="Isseke">Isseke</option>
+                      <option value="Orsumoghu">Orsumoghu</option>
+                      <option value="Ubuluisuzor">Ubuluisuzor</option>
+                      <option value="Uli">Uli</option>
+                      <option value="Others">Others</option>
+                    </select>
                   </div>
                   <div className="space-y-2">
                      <label className="text-[10px] font-bold text-primary opacity-40 uppercase tracking-widest">Message</label>
