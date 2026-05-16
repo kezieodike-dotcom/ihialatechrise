@@ -26,7 +26,7 @@ export default function About() {
               </div>
               <div className="space-y-6 text-primary/70 leading-relaxed text-lg">
                 <p>Ihiala Tech Rise (ITR) is a tech-hub focused on empowering individuals with practical digital skills for today’s tech-driven world. Founded by <strong className="text-primary">Engr. Pgm. Obinna Daniel O.</strong>, a native of Ihiala, Mbrakpaka in Ihiala Local Government, Anambra State, the initiative is driven by a vision to bridge the gap between basic education and real-world tech skills.</p>
-                <p>We equip students, graduates, working-class individuals, business men and even the non-elite across communities including Ihiala Amorka, Azia, Lilu, Okija, Mbosi, Isseke, Orsumoghu, Ubuluisuzor and Uli.</p>
+                <p>We equip students, graduates, working-class individuals, business men and even the non-elite across communities including Ihiala, Amorka, Azia, Lilu, Okija, Mbosi, Isseke, Orsumoghu, Ubuluisuzor and Uli.</p>
               </div>
               <div className="grid grid-cols-2 gap-8 mt-16 max-w-2xl mx-auto">
                 <div className="p-8 bg-background rounded-3xl border-l-[6px] border-secondary shadow-sm">
@@ -119,7 +119,7 @@ export default function About() {
               </div>
 
               <p className="text-lg">
-                <strong className="text-white">Engr. Pgm. Obinna Daniel O.</strong> is a seasoned Civil Engineer
+                <strong className="text-white">Engr. Pgm. Obinna Daniel O.</strong> is a Civil Engineer
                 with over a decade of hands-on experience in infrastructure development and management. A <strong className="text-accent">native of Ihiala, Mbrakpaka
                 in Ihiala Local Government, Anambra State</strong>, he carries a deep sense of responsibility to the soil
                 that nurtured his earliest curiosity for technology.

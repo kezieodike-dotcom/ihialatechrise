@@ -126,10 +126,10 @@ export default function Home() {
               
               <div className="space-y-6 text-white/80 leading-relaxed text-lg font-light">
                 <p>
-                  Founded by <strong className="text-white">Engr. Pgm. Obinna Daniel O.</strong>, a seasoned Civil Engineer and a native of Ihiala, Mbrakpaka in Ihiala Local Government, Anambra State, Ihiala Tech Rise is driven by a vision to bridge the gap between basic education and real-world tech skills.
+                  Founded by <strong className="text-white">Engr. Pgm. Obinna Daniel O.</strong>, a Civil Engineer and a native of Ihiala, Mbrakpaka in Ihiala Local Government, Anambra State, Ihiala Tech Rise is driven by a vision to bridge the gap between basic education and real-world tech skills.
                 </p>
                 <p>
-                  Our initiative equips students, graduates, working-class individuals, business men and even the non-elite across our communities including <span className="text-white font-medium">Ihiala Amorka, Azia, Lilu, Okija, Mbosi, Isseke, Orsumoghu, Ubuluisuzor and Uli.</span>
+                  Our initiative equips students, graduates, working-class individuals, business men and even the non-elite across our communities including <span className="text-white font-medium">Ihiala, Amorka, Azia, Lilu, Okija, Mbosi, Isseke, Orsumoghu, Ubuluisuzor and Uli.</span>
                 </p>
                 <p>
                   Through training, mentorship, and community engagement, we are building a generation that is digitally literate, confident, and ready to create opportunities in the modern workforce.
