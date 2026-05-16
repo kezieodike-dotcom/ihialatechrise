@@ -155,7 +155,8 @@ export default function Partners() {
                       className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all appearance-none cursor-pointer"
                     >
                       <option value="" disabled selected>Select town</option>
-                      <option value="Ihiala Amorka">Ihiala Amorka</option>
+                      <option value="Ihiala">Ihiala</option>
+                      <option value="Amorka">Amorka</option>
                       <option value="Azia">Azia</option>
                       <option value="Lilu">Lilu</option>
                       <option value="Okija">Okija</option>
