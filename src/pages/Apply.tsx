@@ -43,34 +43,28 @@ export default function Apply() {
       submissionErrors.push(`Database: ${sbErr.message || "Failed to fetch (Database offline)"}`);
     }
 
-    // 2. Send to Email via Formsubmit
+    // 2. Send email notification via Supabase Edge Function (uses Resend)
     try {
-      const formPayload = new FormData();
-      Object.entries(formData).forEach(([key, value]) => {
-        formPayload.append(key, value);
-      });
-
-      const response = await fetch("https://formsubmit.co/ajax/danielobinna09@gmail.com", {
-        method: "POST",
-        body: formPayload,
-        headers: {
-          'Accept': 'application/json'
+      const response = await fetch(
+        "https://pciqgqrbilldcaeeglmr.supabase.co/functions/v1/notify-new-application",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
         }
-      });
-      
+      );
+
       if (response.ok) {
         emailSent = true;
+        console.log("Email notification sent successfully.");
       } else {
-        // Even if the response is a redirect or warning, the submission was sent.
-        emailSent = true;
-        console.warn("Email notification returned non-OK status, treating as sent.");
+        const errData = await response.json().catch(() => ({}));
+        console.error("Email notification failed:", errData);
+        submissionErrors.push(`Email: ${errData.error || "Notification service error"}`);
       }
     } catch (emailErr: any) {
-      console.warn("FormSubmit fetch caught error (likely CORS redirect block or offline), treating email as sent:", emailErr);
-      // Since FormSubmit redirects on first submit/activation, it triggers a CORS block in AJAX.
-      // The request was still successfully sent to their servers.
-      emailSent = true;
-      submissionErrors.push(`Email: ${emailErr.message || "CORS redirect block"}`);
+      console.error("Email notification network error:", emailErr);
+      submissionErrors.push(`Email: ${emailErr.message || "Network error"}`);
     }
 
     // 3. Evaluate results

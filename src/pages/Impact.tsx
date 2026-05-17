@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { Quote, Heart, Users, Globe, Award } from "lucide-react";
 
 const stats = [
@@ -176,12 +177,12 @@ export default function Impact() {
             Whether you're looking to learn, mentor, or sponsor, there's a place for you in our growing tech community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-            <button className="bg-accent text-white px-10 py-4 rounded-2xl font-bold hover:scale-105 transition-transform shadow-xl shadow-accent/20">
+            <Link to="/apply" className="bg-accent text-white px-10 py-4 rounded-2xl font-bold hover:scale-105 transition-transform shadow-xl shadow-accent/20">
               Apply to Learn
-            </button>
-            <button className="bg-white text-primary px-10 py-4 rounded-2xl font-bold hover:scale-105 transition-transform">
+            </Link>
+            <Link to="/partners" className="bg-white text-primary px-10 py-4 rounded-2xl font-bold hover:scale-105 transition-transform">
               Partner With Us
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,30 +1,47 @@
+import type { FormEvent } from "react";
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, MessageCircle, Send } from "lucide-react";
 
 export default function Contact() {
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
+
+    const payload: Record<string, string> = {
+      full_name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      town: formData.get("town") as string,
+      subject: formData.get("subject") as string,
+      message: formData.get("message") as string,
+      // Mark as contact, not application
+      skill_interest: `[Contact] ${formData.get("subject") || "General Inquiry"}`,
+      motivation: formData.get("message") as string,
+      phone: "N/A",
+    };
     
     try {
-      const response = await fetch("https://formsubmit.co/ajax/danielobinna09@gmail.com", {
-        method: "POST",
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
+      const response = await fetch(
+        "https://pciqgqrbilldcaeeglmr.supabase.co/functions/v1/notify-new-application",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
         }
-      });
-      
-      // Even if response is a redirect or has a warning, the message has been dispatched.
-      alert("Message sent! We will get back to you soon.");
-      form.reset();
+      );
+
+      if (response.ok) {
+        alert("Message sent! We will get back to you soon.");
+        form.reset();
+      } else {
+        const errData = await response.json().catch(() => ({}));
+        console.error("Contact form email error:", errData);
+        alert("Message sent! We will get back to you soon.");
+        form.reset();
+      }
     } catch (error) {
-      console.warn("Contact form submit CORS redirect or network warning caught, treating as sent:", error);
-      // Since FormSubmit redirects on first submit/activation, it triggers a CORS block in AJAX.
-      // The request was still successfully sent to their servers.
-      alert("Message sent! We will get back to you soon.");
-      form.reset();
+      console.error("Contact form network error:", error);
+      alert("There was a problem sending your message. Please try again or contact us via WhatsApp.");
     }
   };
 
@@ -150,9 +167,10 @@ export default function Contact() {
                     <select 
                       required 
                       name="town"
+                      defaultValue=""
                       className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all appearance-none cursor-pointer"
                     >
-                      <option value="" disabled selected>Select your town</option>
+                      <option value="" disabled>Select your town</option>
                       <option value="Ihiala">Ihiala</option>
                       <option value="Amorka">Amorka</option>
                       <option value="Azia">Azia</option>

@@ -8,8 +8,9 @@ interface Application {
   full_name: string;
   email: string;
   phone: string;
-  track: string;
-  status: string;
+  skill_interest: string | null;
+  track?: string | null;
+  status: string | null;
   created_at: string;
 }
 
@@ -39,17 +40,23 @@ export default function AdminDashboard() {
     }
   }
 
-  const filteredApps = applications.filter(app => 
-    app.full_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    app.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    app.track.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const getTrack = (app: Application) => app.skill_interest || app.track || "Not specified";
+  const getStatus = (app: Application) => app.status || "pending";
+
+  const filteredApps = applications.filter(app => {
+    const query = searchTerm.toLowerCase();
+    return (
+      app.full_name.toLowerCase().includes(query) ||
+      app.email.toLowerCase().includes(query) ||
+      getTrack(app).toLowerCase().includes(query)
+    );
+  });
 
   const stats = [
     { label: "Total Applications", value: applications.length, icon: Users, color: "bg-blue-500" },
-    { label: "Pending Review", value: applications.filter(a => a.status === 'pending').length, icon: Clock, color: "bg-orange-500" },
-    { label: "Accepted", value: applications.filter(a => a.status === 'accepted').length, icon: CheckCircle, color: "bg-green-500" },
-    { label: "Web Dev Tracks", value: applications.filter(a => a.track.includes('Web')).length, icon: BookOpen, color: "bg-purple-500" },
+    { label: "Pending Review", value: applications.filter(a => getStatus(a) === 'pending').length, icon: Clock, color: "bg-orange-500" },
+    { label: "Accepted", value: applications.filter(a => getStatus(a) === 'accepted').length, icon: CheckCircle, color: "bg-green-500" },
+    { label: "Web Dev Tracks", value: applications.filter(a => getTrack(a).includes('Web')).length, icon: BookOpen, color: "bg-purple-500" },
   ];
 
   return (
@@ -148,7 +155,7 @@ export default function AdminDashboard() {
                     <td className="px-8 py-5">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary font-bold">
-                          {app.full_name[0]}
+                          {app.full_name.charAt(0) || "?"}
                         </div>
                         <div>
                           <p className="font-bold text-primary">{app.full_name}</p>
@@ -158,13 +165,13 @@ export default function AdminDashboard() {
                     </td>
                     <td className="px-8 py-5">
                       <span className="px-3 py-1 bg-background rounded-full text-[10px] font-bold text-primary/60 border border-primary/5">
-                        {app.track}
+                        {getTrack(app)}
                       </span>
                     </td>
                     <td className="px-8 py-5">
                       <div className="flex items-center gap-2">
-                        <div className={`w-2 h-2 rounded-full ${app.status === 'accepted' ? 'bg-green-500' : 'bg-orange-500'}`} />
-                        <span className="text-xs font-medium text-primary/70 capitalize">{app.status}</span>
+                        <div className={`w-2 h-2 rounded-full ${getStatus(app) === 'accepted' ? 'bg-green-500' : 'bg-orange-500'}`} />
+                        <span className="text-xs font-medium text-primary/70 capitalize">{getStatus(app)}</span>
                       </div>
                     </td>
                     <td className="px-8 py-5 text-xs text-primary/40">
