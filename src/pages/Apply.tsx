@@ -232,6 +232,8 @@ export default function Apply() {
                     className="w-full bg-background border-none rounded-2xl p-4 focus:ring-2 focus:ring-secondary transition-all appearance-none cursor-pointer"
                   >
                     <option value="" disabled>Select a program</option>
+                    <option value="Introduction to UI/UX">Introduction to UI/UX</option>
+                    <option value="Video Editing">Video Editing</option>
                     <option value="Web Development">Web Development</option>
                     <option value="Graphic Design">Graphic Design</option>
                     <option value="Data Science">Data Science</option>
