@@ -1,10 +1,16 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { Rocket, Laptop, PenTool, Layout, ChevronRight, TrendingUp, Quote } from "lucide-react";
+import { Rocket, Laptop, PenTool, Layout, ChevronRight, TrendingUp, Quote, HelpCircle, ArrowRight } from "lucide-react";
+import SEO from "../components/SEO";
+import SocialShare from "../components/SocialShare";
 
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
+      <SEO
+        title="Ihiala Tech Rise | Empowering Ihiala LGA Through Technology"
+        description="Ihiala Tech Rise equips youths, students, and professionals in Ihiala LGA, Anambra State with high-demand digital skills in Web Development, Graphic Design, and Data Science."
+      />
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center py-20">
         <div 
@@ -80,7 +86,7 @@ export default function Home() {
                 <img 
                   className="w-full h-full object-cover" 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMmrQOWG__nVbLUrm7EgrOiFyOLG-LqhhwG9Hni7tQKKgnPACSqX2OlQcLwxDgm3E-1vhJOQK00V1vEmu3H6nczjkUBqi21JTQTh8L6b7hLaEwIw-yDird6ZjaO5KdBiksUP--_YcvsZyXcayXaaUMYsj0xM7DralcNdPhSD0ksIMG3cI9xilK1IzGXTco14DE_ukSjg6YPq8DzNZ-agjSoZfCuF31sLAiA93NdkssUqHjKUktc1OyC0Tiyhu-8syKEw1kvOR7_Rk" 
-                  alt="Students learning" 
+                  alt="Ihiala Tech Rise students engaged in hands-on computer coding workshop" 
                 />
               </div>
               <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-2xl shadow-xl z-20 border border-primary/5 animate-bounce-slow">
@@ -165,7 +171,7 @@ export default function Home() {
                 <img 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_gQL57-mnwgKthH3DY1njaty_fsTf26aKeriYqsZPpLax5EwpCWCXAkeceauY1GTNr0Ho7e72lupE5x5Iu14HvJr1r-wi0fthfPCfDsIkce_y6TTlVJhwlJcOcYCxvOuXqX8rdHk0CeWdKmt2Nh_eY-x2ApFZcISbVCUgQr2DnUs77w4V9i4ngQGF5GtQPD7keDisfCUcaFNlzGETERfzFUTr-_WbX1MkRyPrFERSF8EYNqBAcErH55MYeU2qSdf-1qTYqFeJrbg" 
-                  alt="Web Dev" 
+                  alt="Student coding modern responsive web applications in full-stack web development track" 
                 />
               </div>
               <div className="md:w-1/2 p-10 flex flex-col justify-between">
@@ -192,7 +198,7 @@ export default function Home() {
                 <img 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnR0zF57xa1CDF8y2lRqZPjrXF9O21ZVZ2nuDsWfSBaW-Zekw0ogm1V1i8vrqFX_dXXRNnlNcsEGBuaVEeTrA3e9ay8YmVOEVIlhOivxGg1WlWKiGZeO57b9-46RPy3E-cyqbSyFMwkV9Tngpo7rlcL84V0g-6KLPAzl5IRWvEiRfOt8RaxDGeQBUCOuZBCVDuy8s9q7rrQ3lTxj_63egcBXG112LnUJZjcmi5bZQKr2HLmg2JVi2M34WXEFOPbCbEcmOUCxMoskE" 
-                  alt="Digital Literacy" 
+                  alt="Students gaining computer and digital literacy skills in classroom" 
                 />
                 <div className="absolute top-4 left-4 bg-secondary/10 text-secondary px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest backdrop-blur-sm">Beginner</div>
               </div>
@@ -214,7 +220,7 @@ export default function Home() {
                 <img 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgYjxlTUKPrZR-mudx1ex95uyxgQm8UVNBz8mYglSd-8YB6MSWJVpntyL2XeGHhijfq6YPCiVw7xVdUs5m7xXSvFT8_2tf14gUy8Bgy9OEnXdHPyZiTgiUegRVVsiI2o-PV3kPJ4MGrbEizzddr12vsw224VTj8PTgza_f9tmw94oj8KNB5xTBWBHGLqG20JBtdSpdbp4i7G8cOzlP_-FQRUIndLBg_tbea8kJMWhJUj1np0QFa8fK-D7S2vAihmhxpBGEs66ldKM" 
-                  alt="Graphics" 
+                  alt="Graphic design student working on visual designs, UI/UX, and creative branding tools" 
                 />
                 <div className="absolute top-4 left-4 bg-accent/10 text-accent px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest backdrop-blur-sm">Creative</div>
               </div>
@@ -281,7 +287,7 @@ export default function Home() {
                 <img 
                   className="w-full h-full object-cover" 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfrUUw7cOqgPpVZ6irb5D6MXqm07nrnzfE71RpSj8LQcX8VpHbHKPDEOGXudUKOBJU8DmLfoXm2d1VY9UcOLSvI5nTv_rs7MKGnD7IpoTzb6vCEGunHMyGdunJZ9_i5phd8rwQUKwoCjO5GN2gnCmRpeI0PUoGrGli7il833wMcbEc7e1xPU2g7ZiiLJ_7kw3Cv5-MwTB5laPvRUZH425QsScO-z6G_mtHuH6yqhxl3h_UE_wHgyp4ukn0f3jZcUYvOfpn6cvkmvA" 
-                  alt="Graduate" 
+                  alt="Chinedu Okafor - Web Development Graduate testimonial" 
                 />
               </div>
               <div>
@@ -293,6 +299,38 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Banner & Social Sharing Section */}
+      <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          {/* FAQ Teaser */}
+          <div className="bg-white rounded-3xl p-8 md:p-12 border border-primary/5 shadow-md flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex items-center gap-5">
+              <div className="p-4 bg-secondary/10 text-secondary rounded-2xl flex-shrink-0">
+                <HelpCircle className="w-8 h-8" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-1">Have Questions About Our Programs?</h3>
+                <p className="text-primary/60 text-sm">
+                  Learn about eligibility, training fees (100% free), laptop recommendations, certificates, and class venues in Ihiala.
+                </p>
+              </div>
+            </div>
+            <Link
+              to="/faq"
+              className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3.5 rounded-2xl font-bold text-sm hover:brightness-110 shadow-md whitespace-nowrap transition-all"
+            >
+              Browse FAQ Center <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Social Share Callout */}
+          <SocialShare
+            title="Ihiala Tech Rise - Free Tech Bootcamps in Ihiala LGA"
+            summary="Empowering youths across Ihiala LGA (Ihiala, Okija, Uli, Azia, Amorka, etc.) with world-class digital skills in Web Development, Graphic Design & Data Science."
+          />
         </div>
       </section>
 

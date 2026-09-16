@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
-import { CheckCircle, School, Users, Award, Clock, ArrowRight } from "lucide-react";
+import { CheckCircle, School, Users, Award, Clock, ArrowRight, Code, PenTool, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
+import SocialShare from "../components/SocialShare";
 
 const programs = [
   {
@@ -37,11 +39,14 @@ const programs = [
   }
 ];
 
-import { PenTool, Code, TrendingUp } from "lucide-react";
-
 export default function Programs() {
   return (
     <div className="pt-20 pb-24">
+      <SEO
+        title="Training Programs & Bootcamps | Ihiala Tech Rise"
+        description="Explore our intensive hands-on tech programs in Web Development, Digital Literacy, Graphic Design, and Data Science in Ihiala LGA, Anambra State. Free enrollment and industry mentorship."
+        keywords="Ihiala coding bootcamp, web development training Anambra, graphic design courses Ihiala, data analytics bootcamp"
+      />
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="max-w-3xl mb-20">
@@ -75,7 +80,7 @@ export default function Programs() {
               className="bg-white rounded-3xl overflow-hidden shadow-lg border border-primary/5 flex flex-col h-full group"
             >
               <div className="h-48 relative overflow-hidden">
-                <img src={program.image} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={program.title} />
+                <img src={program.image} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={`${program.title} training program at Ihiala Tech Rise`} />
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">{program.level}</div>
               </div>
               <div className="p-8 flex flex-col flex-grow">
@@ -136,6 +141,14 @@ export default function Programs() {
             </div>
           </div>
         </section>
+
+        {/* Social Share Section */}
+        <div className="mt-16">
+          <SocialShare
+            title="Explore Free Tech Bootcamps at Ihiala Tech Rise"
+            summary="Join full-stack Web Development, Digital Literacy, Graphic Design & Data Science cohorts in Ihiala LGA. Build your career with industry mentorship."
+          />
+        </div>
       </div>
     </div>
   );

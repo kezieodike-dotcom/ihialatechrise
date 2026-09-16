@@ -1,13 +1,19 @@
 import { motion } from "motion/react";
 import { User, Target, Eye, Star, Quote, School, Building2, Cpu, Award, GraduationCap, MapPin, Lightbulb, BookOpen, Users, HardHat } from "lucide-react";
+import SEO from "../components/SEO";
 
 export default function About() {
   return (
     <div className="pt-20">
+      <SEO
+        title="About Us | Engr. Obinna Daniel O. & Ihiala Tech Rise"
+        description="Learn about the origins, mission, and vision of Ihiala Tech Rise, founded by Engr. Pgm. Obinna Daniel O. to empower youths across Ihiala LGA with modern digital tech skills."
+        keywords="About Ihiala Tech Rise, Engr Obinna Daniel O, Ihiala tech education, Anambra digital literacy"
+      />
       {/* Hero */}
       <section className="bg-primary py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-GQqyPAJp3ib_psBjYy_1_3zH1S31rFUac3-dZXKwmamzx1JHKszQJ91Hsg_G2BPGNXbRFsHVuY-i0DbZPasfPIV8mswbrfJ5V2fjG0S7Dg7EQd6swtqDJu8jLIui7OdByj0277LjkiY5XYrD6bLtj2APE2uFT5R-hwJTsmU2vXgJgZTj0Kk1-onEKr8jX7yyaNIyH5JoNWunnw-0xlsnpimGvpOAIcFyyHFp_Uj1GjK4VSGFSNoGv2YCB2d19ExZd620UZ2w6Bc" className="w-full h-full object-cover" alt="Background" />
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-GQqyPAJp3ib_psBjYy_1_3zH1S31rFUac3-dZXKwmamzx1JHKszQJ91Hsg_G2BPGNXbRFsHVuY-i0DbZPasfPIV8mswbrfJ5V2fjG0S7Dg7EQd6swtqDJu8jLIui7OdByj0277LjkiY5XYrD6bLtj2APE2uFT5R-hwJTsmU2vXgJgZTj0Kk1-onEKr8jX7yyaNIyH5JoNWunnw-0xlsnpimGvpOAIcFyyHFp_Uj1GjK4VSGFSNoGv2YCB2d19ExZd620UZ2w6Bc" className="w-full h-full object-cover" alt="Ihiala Tech Rise technology training workshop background" />
         </div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <span className="bg-accent text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 inline-block tracking-[0.2em]">Rooted In Growth</span>
@@ -80,7 +86,7 @@ export default function About() {
                 <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-accent shadow-2xl shadow-accent/30 mx-auto">
                   <img
                     src="/founder.jpeg"
-                    alt="Engr. Pgm. Obinna Daniel O."
+                    alt="Engr. Pgm. Obinna Daniel O. - Founder and Director of Ihiala Tech Rise"
                     className="w-full h-full object-cover"
                   />
                 </div>

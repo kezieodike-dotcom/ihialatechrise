@@ -1,16 +1,22 @@
 import { motion } from "motion/react";
 import { Handshake, Globe, ShieldCheck, TrendingUp, CheckCircle, Mail, MapPin } from "lucide-react";
+import SEO from "../components/SEO";
 
 export default function Partners() {
   return (
     <div className="pt-20">
+      <SEO
+        title="Partner With Us | Empower Ihiala Through Tech | Ihiala Tech Rise"
+        description="Partner with Ihiala Tech Rise to empower youths in Ihiala LGA, Anambra State. Collaborate on hardware donations, internet connectivity, mentorship, and tech talent hiring."
+        keywords="Partner Ihiala Tech Rise, sponsor coding Anambra, tech CSR Nigeria, hire tech talent Ihiala"
+      />
       {/* Hero */}
       <header className="relative h-[550px] flex items-center overflow-hidden bg-primary px-4">
         <div className="absolute inset-0 opacity-20">
            <img 
             className="w-full h-full object-cover" 
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-1_KWjtujpxMDipzrIir_E402QRuZUqYqAeUHSJJ_GBumYdODkbjB7HG93KBOQDZeucCwJ59p6Cl7DgfKZcs79iIykmx8zu8_i4fJmyDcqhL2f1BoV8U3qL134VSy9PhOalKoSkNUEUmvV1kwoxDSPHCqKlyz3BuB3NZ3igoE9Wz2EHB4hDatFikvrw_ylTdhLwkXPDMf2TQNzavQG_5PIeFzaaIPQ4KoLnWP3-7kWDJlDh-RSfVgdyklPjZCsZ35nOR3MLfO45A" 
-            alt="Business professionals shake hands" 
+            alt="Business professionals shaking hands in strategic partnership at Ihiala Tech Rise" 
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/20" />

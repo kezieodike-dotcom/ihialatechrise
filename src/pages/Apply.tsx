@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
-import { CheckCircle, School, Users, Award, Briefcase, Star, Loader2 } from "lucide-react";
+import { CheckCircle, School, Users, Award, Briefcase, Star, Loader2, ArrowRight } from "lucide-react";
 import { supabase } from "../lib/supabase";
+import SEO from "../components/SEO";
 
 export default function Apply() {
   const [submitted, setSubmitted] = useState(false);
@@ -98,6 +100,11 @@ export default function Apply() {
 
   return (
     <div className="pt-20 pb-24 px-4">
+      <SEO
+        title="Apply for Tech Cohort | Ihiala Tech Rise"
+        description="Apply for our free intensive tech training cohorts in Web Development, Digital Literacy, Graphic Design, and Data Science in Ihiala LGA, Anambra State."
+        keywords="Apply Ihiala tech training, free coding school Ihiala, Anambra youth tech program"
+      />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
         {/* Form Container */}
         <div className="lg:col-span-7">
@@ -130,19 +137,27 @@ export default function Apply() {
                 animate={{ opacity: 1, y: 0 }}
                 className="bg-secondary/10 border border-secondary/20 p-10 rounded-3xl text-center"
               >
-                <div className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-secondary/20">
                   <CheckCircle className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-4">Application Received!</h3>
-                <p className="text-primary/60 leading-relaxed">
+                <p className="text-primary/60 leading-relaxed max-w-md mx-auto mb-6">
                   Thank you for applying. Our team will review your application and get back to you via email within 5-7 business days.
                 </p>
-                <button 
-                  onClick={() => setSubmitted(false)}
-                  className="mt-8 text-secondary font-bold hover:underline"
-                >
-                  Apply for another program
-                </button>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <Link
+                    to="/thank-you?type=application"
+                    className="inline-flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:brightness-110 transition-all"
+                  >
+                    View Next Steps & Share <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <button 
+                    onClick={() => setSubmitted(false)}
+                    className="text-primary/70 font-semibold hover:text-primary text-sm py-2"
+                  >
+                    Apply for another program
+                  </button>
+                </div>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-8">
@@ -268,7 +283,7 @@ export default function Apply() {
             <img 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAygDt-8YZ-BinsIh8eIeltYBmh2FEwlkLnNoOQAC1qbLygrN2juNuY4BqcjM2XE9aw5_8Q31ybqUXQpF9HumY-n0IvbsBfeqkOJha9yHapL06QmbTGIcUQnJ5PVEzDEYsxkONz0UjQisxMtMnAdXMatuqV2PaNPFm67_GzX35rnEmQZmXKqnDh4U43jIVyVBdYV2L9DJ7cbKSBx2ffv0NtMCQK0HdIiGNJxR1zx5x1nNePUrTafvzaSdQ2_z_dSgZVOgB8phivawA" 
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" 
-              alt="Join Cohort" 
+              alt="Enthusiastic students collaborating during Ihiala Tech Rise training cohort" 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
             <div className="absolute bottom-8 left-8 text-white">

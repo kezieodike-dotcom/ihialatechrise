@@ -10,6 +10,11 @@ import Apply from "./pages/Apply";
 import Contact from "./pages/Contact";
 import Impact from "./pages/Impact";
 import AdminDashboard from "./pages/AdminDashboard";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ThankYou from "./pages/ThankYou";
+import FAQ from "./pages/FAQ";
+import Sitemap from "./pages/Sitemap";
+import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -36,7 +41,13 @@ export default function App() {
             <Route path="/impact" element={<Impact />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/apply" element={<Apply />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/sitemap" element={<Sitemap />} />
             <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

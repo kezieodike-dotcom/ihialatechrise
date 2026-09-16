@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1 border-b border-white/10 pb-8 md:border-0 md:pb-0">
             <Link to="/" className="flex items-center gap-3 mb-6">
               <div className="bg-white p-1.5 rounded-full shadow-lg">
-                <img src="/logo.png" alt="Ihiala Tech Rise Logo" className="h-10 w-10 object-contain" />
+                <img src="/logo.png" alt="Ihiala Tech Rise Official Logo" className="h-10 w-10 object-contain" />
               </div>
               <span className="font-bold text-2xl tracking-tight">Ihiala Tech Rise</span>
             </Link>
@@ -58,15 +58,16 @@ export default function Footer() {
                 <li><Link to="/about" className="text-white/60 hover:text-white text-sm transition-colors">About Us</Link></li>
                 <li><Link to="/impact" className="text-white/60 hover:text-white text-sm transition-colors">Impact Stories</Link></li>
                 <li><Link to="/partners" className="text-white/60 hover:text-white text-sm transition-colors">Partner With Us</Link></li>
-                <li><button className="text-white/60 hover:text-white text-sm transition-colors text-left uppercase font-bold text-[10px]">Volunteer</button></li>
+                <li><Link to="/apply" className="text-white/60 hover:text-white text-sm transition-colors">Apply Now</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold text-accent mb-6 uppercase tracking-widest text-xs">Support</h4>
+              <h4 className="font-bold text-accent mb-6 uppercase tracking-widest text-xs">Support & Legal</h4>
               <ul className="space-y-4">
+                <li><Link to="/faq" className="text-white/60 hover:text-white text-sm transition-colors">FAQ Center</Link></li>
                 <li><Link to="/privacy" className="text-white/60 hover:text-white text-sm transition-colors">Privacy Policy</Link></li>
-                <li><Link to="/terms" className="text-white/60 hover:text-white text-sm transition-colors">Terms of Service</Link></li>
-                <li><Link to="/contact" className="text-white/60 hover:text-white text-sm transition-colors">Contact</Link></li>
+                <li><Link to="/sitemap" className="text-white/60 hover:text-white text-sm transition-colors">Site Map</Link></li>
+                <li><Link to="/contact" className="text-white/60 hover:text-white text-sm transition-colors">Contact & Directions</Link></li>
               </ul>
             </div>
           </div>
@@ -76,9 +77,17 @@ export default function Footer() {
           <p className="text-white/40 text-xs">
             © {new Date().getFullYear()} Ihiala Tech Rise. All rights reserved. Empowering communities through technology.
           </p>
-          <Link to="/admin" className="text-white/20 hover:text-white/60 text-[10px] font-bold uppercase tracking-widest transition-all">
-            Admin Portal
-          </Link>
+          <div className="flex items-center gap-6">
+            <Link to="/sitemap" className="text-white/40 hover:text-white text-xs transition-colors">
+              Sitemap
+            </Link>
+            <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white text-xs transition-colors">
+              XML
+            </a>
+            <Link to="/admin" className="text-white/20 hover:text-white/60 text-[10px] font-bold uppercase tracking-widest transition-all">
+              Admin Portal
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

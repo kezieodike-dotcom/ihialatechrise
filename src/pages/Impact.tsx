@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { Quote, Heart, Users, Globe, Award } from "lucide-react";
+import SEO from "../components/SEO";
+import SocialShare from "../components/SocialShare";
 
 const stats = [
   { icon: <Users />, label: "Students Trained", value: "850+" },
@@ -60,6 +62,11 @@ const testimonials = [
 export default function Impact() {
   return (
     <div className="pt-20 pb-24 px-4 bg-background overflow-hidden">
+      <SEO
+        title="Impact & Success Stories | Ihiala Tech Rise"
+        description="Discover how Ihiala Tech Rise is transforming lives across Ihiala LGA, Anambra State through free tech education, high employment rates, and global job placements."
+        keywords="Ihiala Tech Rise impact, Anambra tech success stories, student testimonials, tech graduates"
+      />
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <header className="text-center mb-24">
@@ -126,7 +133,7 @@ export default function Impact() {
                 className="bg-white p-10 rounded-[3rem] shadow-2xl border border-primary/5 flex flex-col md:flex-row gap-8 items-center"
               >
                 <div className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0 border-4 border-secondary/20">
-                  <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
+                  <img src={t.image} alt={`${t.name} - ${t.role} testimonial`} className="w-full h-full object-cover" />
                 </div>
                 <div className="relative">
                   <Quote className="absolute -top-6 -left-6 w-12 h-12 text-secondary/10" />
@@ -158,7 +165,7 @@ export default function Impact() {
                   viewport={{ once: true }}
                   className="group relative h-80 rounded-[2rem] overflow-hidden shadow-lg"
                 >
-                  <img src={item.url} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                  <img src={item.url} alt={`${item.title} - ${item.category} session at Ihiala Tech Rise`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                     <span className="bg-accent/20 text-accent px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest backdrop-blur-md">{item.category}</span>
@@ -167,6 +174,14 @@ export default function Impact() {
                 </motion.div>
               ))}
            </div>
+        </div>
+
+        {/* Social Share Section */}
+        <div className="mt-20">
+          <SocialShare
+            title="Stories of Change at Ihiala Tech Rise"
+            summary="See how young people in Ihiala LGA are transforming their careers through free tech education in Web Development, Graphic Design, and Data Science."
+          />
         </div>
 
         {/* CTA */}

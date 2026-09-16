@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabase";
 import { motion } from "motion/react";
 import { Users, BookOpen, Clock, CheckCircle, Download, Search, Filter, ChevronRight } from "lucide-react";
+import SEO from "../components/SEO";
 
 interface Application {
   id: string;
@@ -61,6 +62,11 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-background pt-20 pb-12 px-4 sm:px-6 lg:px-8">
+      <SEO
+        title="Admin Dashboard | Ihiala Tech Rise"
+        description="Admin dashboard for reviewing cohort applications and candidate details."
+        noindex={true}
+      />
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
