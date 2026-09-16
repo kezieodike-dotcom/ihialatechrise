@@ -4,4 +4,4 @@ Allow: /
 Disallow: /admin
 
 # Sitemaps
-Sitemap: https://ihialatechrise.org/sitemap.xml
+Sitemap: https://www.ihialatechrise.com/sitemap.xml

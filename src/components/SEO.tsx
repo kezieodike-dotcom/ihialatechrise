@@ -13,11 +13,11 @@ export default function SEO({
   title,
   description,
   keywords,
-  image = "https://ihialatechrise.org/logo.png",
+  image = "https://www.ihialatechrise.com/logo.png",
   noindex = false,
 }: SEOProps) {
   const location = useLocation();
-  const canonicalUrl = `https://ihialatechrise.org${location.pathname}`;
+  const canonicalUrl = `https://www.ihialatechrise.com${location.pathname}`;
 
   useEffect(() => {
     // 1. Update Title

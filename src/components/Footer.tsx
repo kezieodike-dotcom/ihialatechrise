@@ -32,7 +32,7 @@ export default function Footer() {
                 <Mail className="w-5 h-5" />
               </a>
               <a 
-                href="https://ihialatechrise.org" 
+                href="https://www.ihialatechrise.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-2 bg-white/10 rounded-full hover:bg-secondary/20 hover:text-secondary transition-all"

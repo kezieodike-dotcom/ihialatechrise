@@ -11,7 +11,7 @@ interface SocialShareProps {
 
 export default function SocialShare({
   title = "Ihiala Tech Rise - Empowering Communities Through Tech",
-  url = typeof window !== "undefined" ? window.location.href : "https://ihialatechrise.org",
+  url = typeof window !== "undefined" ? window.location.href : "https://www.ihialatechrise.com",
   summary = "Join the tech revolution in Ihiala LGA! Free hands-on tech training in Web Development, Digital Literacy, Graphic Design & Data Science.",
   className = "",
   compact = false,
