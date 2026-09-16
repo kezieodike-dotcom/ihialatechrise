@@ -61,6 +61,7 @@ export default function SEO({
     setMetaTag("property", "og:description", description);
     setMetaTag("property", "og:url", canonicalUrl);
     setMetaTag("property", "og:image", image);
+    setMetaTag("property", "fb:page_id", "61590866724712");
 
     // 4. Twitter
     setMetaTag("name", "twitter:title", formattedTitle);

@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { Mail, Globe, Share2 } from "lucide-react";
 
+const FacebookIcon = () => (
+  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+  </svg>
+);
+
 export default function Footer() {
   return (
     <footer className="bg-primary text-white pt-20 pb-10">
@@ -17,6 +23,15 @@ export default function Footer() {
               Founded by <span className="text-white font-bold">Engr. Pgm. Obinna Daniel O.</span>, a Civil Engineer and a native of Ihiala, Mbrakpaka in Ihiala Local Government.
             </p>
             <div className="flex gap-4">
+              <a
+                href="https://www.facebook.com/p/ihialatechrise-61590866724712/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Ihiala Tech Rise on Facebook"
+                className="p-2 bg-white/10 rounded-full hover:bg-[#1877F2]/30 hover:text-[#1877F2] transition-all"
+              >
+                <FacebookIcon />
+              </a>
               <a 
                 href="https://t.me/ihialatechrise" 
                 target="_blank" 
